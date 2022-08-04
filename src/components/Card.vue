@@ -1,13 +1,12 @@
 <template>
   <div :class="['card', show ? 'card_turn' : '']" @click="emit('show')">
     <div class="card_front">
-      <img src="../imgs/cover.png" />
+      <img src="/assets/cover.png" />
     </div>
-    <div class="card_back"><img :src="`src/imgs/${back}`" alt="" /></div>
+    <div class="card_back"><img :src="`/assets/${back}`" alt="" /></div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue";
 interface Props {
   back: string;
   show: boolean;
